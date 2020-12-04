@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inserting HTML Contents Before or After the Elements in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#container").after("<p>&mdash; The End &mdash;</p>");
+    
+   
+    $("#container").before("<p>&mdash; Demo Text &mdash;</p>");
+    
+    
+    $("button.insert-after").click(function(){
+        $("h1").after('<img src="./star.png" alt="Symbol">');
+    });
+    
+   
+    $("button.insert-before").click(function(){
+        $("h1").before('<img src="./star.png" alt="Symbol">');
+    });
+});
+</script>
+<style>
+    h1{
+        display: inline-block; 
+    }
+    body{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h1>SOMACODE CLASS</h1>
+    <hr>
+    <button type="button" class="insert-before">Insert Before</button>
+    <button type="button" class="insert-after">Insert After</button>
+    <hr>
+    
+</body>
+</html>                                		
